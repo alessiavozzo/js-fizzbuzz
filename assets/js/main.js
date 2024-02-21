@@ -30,7 +30,11 @@ for (let i = 1; i <= 100; i++){
     }
     
     elementList.append(listItem);
-    listItem.append(numberChange)
+    listItem.append(numberChange);
 
-    
+    listItem.classList.add("d-flex");
+
+    if(isNaN(numberChange)){
+        listItem.classList.add(numberChange);
+    }
 }

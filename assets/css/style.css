@@ -6,22 +6,71 @@
 }
 
 /* #endregion reset */
+/* #region color palette */
+:root{
+    --game-main: #083b4cFF;
+    --fizz-cell: #0CD6A1;
+    --buzz-cell: #FFD166;
+    --number-cell: #1389B2;
+    --fizzbuzz-cell: #F0466F;
+}
+/* #endregion color palette */
+
+/* #region utility */
+.d-flex{
+    display: flex;
+}
+/* #endregion utility */
+
+/* #region common */
+
+#site_main{
+    background-color: var(--game-main);
+    padding: 2rem 0 2rem 0;
+}
 
 .container{
     width: 80%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
 }
 
+h1{
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* #endregion common */
+
+/* #region list */
+
 ul{
     list-style: none;
-    display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 
     > li{
         height: 5rem;
         width: 5rem;
-        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        background-color: var(--number-cell);
+        border-radius: 15px;
+
+        &.Fizz{
+            background-color: var(--fizz-cell);
+        }
+        &.Buzz{
+            background-color: var(--buzz-cell);
+        }
+        &.FizzBuzz{
+            background-color: var(--fizzbuzz-cell);
+        }
     }
 }
+
+/* #endregion list */
