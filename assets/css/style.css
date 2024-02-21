@@ -1,5 +1,5 @@
 /* #region reset */
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,35 +7,37 @@
 
 /* #endregion reset */
 /* #region color palette */
-:root{
+:root {
     --game-main: #083b4cFF;
     --fizz-cell: #0CD6A1;
     --buzz-cell: #FFD166;
     --number-cell: #1389B2;
     --fizzbuzz-cell: #F0466F;
 }
+
 /* #endregion color palette */
 
 /* #region utility */
-.d-flex{
+.d-flex {
     display: flex;
 }
+
 /* #endregion utility */
 
 /* #region common */
 
-#site_main{
+#site_main {
     background-color: var(--game-main);
     padding: 2rem 0 2rem 0;
 }
 
-.container{
+.container {
     width: 80%;
     max-width: 1000px;
     margin: auto;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 8rem;
     margin-bottom: 1.5rem;
@@ -46,31 +48,53 @@ h1{
 
 /* #region list */
 
-ul{
+ul {
     list-style: none;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 
-    > li{
+    >li {
         height: 5rem;
         width: 5rem;
         justify-content: center;
         align-items: center;
         font-weight: bold;
-        background-color: var(--number-cell);
         border-radius: 15px;
 
-        &.Fizz{
+        &.number {
+            background-color: var(--number-cell);
+
+            &:hover {
+                box-shadow: 0 0 6px 3px white;
+            }
+        }
+
+        &.Fizz {
             background-color: var(--fizz-cell);
+
+            &:hover {
+                box-shadow: 0 0 6px 3px green;
+            }
         }
-        &.Buzz{
+
+        &.Buzz {
             background-color: var(--buzz-cell);
+
+            &:hover {
+                box-shadow: 0 0 6px 3px yellow;
+            }
         }
-        &.FizzBuzz{
+
+        &.FizzBuzz {
             background-color: var(--fizzbuzz-cell);
+
+            &:hover {
+                box-shadow: 0 0 6px 3px red;
+            }
         }
     }
 }
+
 
 /* #endregion list */

@@ -37,4 +37,7 @@ for (let i = 1; i <= 100; i++){
     if(isNaN(numberChange)){
         listItem.classList.add(numberChange);
     }
+    else{
+        listItem.classList.add("number")
+    }
 }
